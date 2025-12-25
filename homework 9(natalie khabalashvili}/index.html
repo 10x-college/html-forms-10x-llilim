@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jovian Drift SOS</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <iframe id="bg-frame" src="../styles/effect.html"></iframe>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Pilot Credentials</legend>
+        <label for="pilot-name">Pilot Name</label>
+        <input type="text" id="pilot-name" name="pilot_name" required />
+        <label for="Access-Code">Access Code</label>
+        <input type="password" name="Access_Code" id="Access-Code" required />
+        <label for="command-email">Command Email:</label>
+        <input type="email" name="command_email" id="command-email" required />
+      </fieldset>
+      <fieldset>
+        <legend>Vessel Diagnostics</legend>
+        <label for="Hull-Damage">Hull Damage (%):</label>
+        <input type="number" id="Hull-Damage" name="hull_damage" required />
+        <label for="Emergency-Level">Emergency Level</label>
+        <select name="emergency_level" id="emergency-level" required>
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Mission Log & Evidence</legend>
+        <label for="SOS-Message">SOS Message:</label>
+        <textarea
+          name="SOS-Message"
+          id="SOS-Message"
+          rows="3"
+          required
+        ></textarea>
+        <div>
+          <input
+            type="checkbox"
+            name="quarantine_agreement"
+            id="quarantine"
+            required
+          />
+          <label for="quarantine">I agree to quarantine protocols.</label>
+        </div>
+      </fieldset>
+      <button type="submit">INITIATE TRANSMISSION</button>
+      <button type="reset">RESET SYSTEM</button>
+    </form>
+    <script src="../scripts/launch.js"></script>
+  </body>
+</html>
